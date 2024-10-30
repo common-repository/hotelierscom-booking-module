@@ -1,0 +1,5 @@
+{
+    "require": {
+        "tubalmartin/cssmin": "^2.4"
+    }
+}

@@ -1,0 +1,30 @@
+/**
+| Theme styles
+|
+| #1 - Value is usually the same
+*/
+
+.hoteliers-form {
+        font-size: 20px;                /* Set font-size for all text !*/
+        font-family: Arial, sans-serif; /* Set font-family for all text !*/
+}
+
+.hoteliers-form_form-field {
+        color: blue;                    /* #1 | Set font color inside input fields !*/
+        background: white;              /* Set background-color inside input fields !*/
+        border: 1px solid #F94F5E;      /* Set border on input fields !*/
+}
+
+.hoteliers-form__icon path {
+        fill: #344051;                  /* #1 | Set color of (calendar) icon in input field !*/
+}
+
+.hoteliers-form__label {
+        color: #344051;                 /* Set font color of form label !*/
+}
+
+.hoteliers-form_btn {
+        background: #3FD5AE;            /* Set background color of form submit button !*/
+        color: white;                   /* Set font color of form submit button !*/
+        border: 1px solid #3FD5AE;      /* Set border on input fields !*/
+}

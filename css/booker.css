@@ -1,0 +1,133 @@
+/*
+    ACTUAL BOOKER FRAMEWORK
+
+    #1 - Values must be equal
+    #2 - Width and height values must be equal, px value in calc() should be half
+*/
+
+
+.hoteliers-form {}
+
+/* Set all elements inside .hoteliers-form to borderbox */
+.hoteliers-form * {
+    box-sizing: -moz-border-box;
+    box-sizing: -ms-border-box;
+    box-sizing: -webkit-border-box;
+    box-sizing: border-box;
+}
+
+.hoteliers-form__list {
+    list-style: none;
+    padding: 0;
+}
+
+.hoteliers-form__label {
+    display: block;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    font-size: 90%;
+    cursor: pointer;
+}
+
+.hoteliers-form__label--hidden {
+    visibility: hidden;
+    width: 100%;
+    white-space: nowrap;
+}
+
+/* GRID */
+
+.hoteliers-form__grid {
+    margin-left: -20px; /* #1 */
+}
+
+/* Clear floats from grid */
+.hoteliers-form__grid:before,
+.hoteliers-form__grid:after {
+    content: " ";
+    display: table;
+}
+
+.hoteliers-form__grid:after {
+    clear: both;
+}
+/* / Clear floats from grid */
+
+/*
+    Create horizontal grid by floating left
+*/
+.hoteliers-form__grid .hoteliers-form__grid-item {
+    padding-left: 20px; /* #1 */
+    float: left;
+}
+
+/*
+  Set different width for grid items (from 3 up to 6)
+*/
+.hoteliers-form__grid--3-fields .hoteliers-form__grid-item {
+    width: calc(99.9% / 3);
+}
+.hoteliers-form__grid--4-fields .hoteliers-form__grid-item {
+    width: calc(100% / 4);
+}
+.hoteliers-form__grid--5-fields .hoteliers-form__grid-item {
+    width: calc(100% / 5);
+}
+.hoteliers-form__grid--6-fields .hoteliers-form__grid-item {
+    width: calc(100% / 6);
+}
+/*
+  / Set different width for grid items
+*/
+
+/* Set grid items to 100% width on break-point */
+@media (max-width: 800px) {
+    .hoteliers-form__grid--3-fields .hoteliers-form__grid-item,
+    .hoteliers-form__grid--4-fields .hoteliers-form__grid-item,
+    .hoteliers-form__grid--5-fields .hoteliers-form__grid-item,
+    .hoteliers-form__grid--6-fields .hoteliers-form__grid-item	{
+        width: 100%;
+    }
+}
+
+/* / GRID */
+
+.hoteliers-form_form-field-container {
+    position: relative;
+    border: 0;
+}
+
+.hoteliers-form_form-field {
+    position: relative;
+    z-index: 1000;
+    width: 100%;
+    padding: 10px;
+    border: 0;
+    border-radius: 3px;
+    font-size: 100%;
+    font-family: inherit;
+    cursor: pointer;
+}
+@media (max-width: 741px) {
+    .hoteliers-form_form-field.hasDatepicker {
+        font-size: 16px;
+    }
+}
+
+.hoteliers-form__icon {
+    display: inline-block;
+    position: absolute;
+    z-index: 1001;
+    top: calc(50% - 14px); /* #2 | Vertically center icon */
+    right: 5px;
+    width: 18px; /* #2 */
+    height: 18px; /* #2 */
+}
+
+.hoteliers-form__icon--no-event {
+    pointer-events: none;
+}
+
+/*
+    / ACTUAL BOOKER  FRAMEWORK
+*/
